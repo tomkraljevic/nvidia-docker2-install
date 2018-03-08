@@ -18,7 +18,7 @@ Step 1:  Install docker-ce.  This is a requirement for nvidia-docker2.
 Step 2:  Download and install nvidia-docker2.
 
 ```
-wget https://github.com/tomkraljevic/nvidia-docker2-install/blob/master/x86_64-centos7.tar
+wget https://raw.githubusercontent.com/tomkraljevic/nvidia-docker2-install/master/x86_64-centos7.tar
 tar xvf x86_64-centos7.tar
 yum install x86_64-centos7/*.rpm
 ```
