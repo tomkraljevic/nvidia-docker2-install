@@ -9,9 +9,9 @@ The artifacts have been collected from open source Linux distributions using the
 
 ---
 
-## Platform x86_64-centos7
+## 1.  Platform x86_64-centos7
 
-### Quick Start -- *This is all you need to do*
+### 1.1 Quick Start -- *This is all you need to do*
 
 Step 1:  Install docker-ce.  This is a requirement for nvidia-docker2.
 
@@ -23,11 +23,11 @@ tar xvf x86_64-centos7.tar
 yum install x86_64-centos7/*.rpm
 ```
 
-### Details about the tarball
+### 1.2 Details about the tarball
 
 Date created:  March 7, 2018
 
-Contents:
+#### Contents:
 
 ```
 -rw-r--r--  1 root root   32444 Mar  6 02:57 libnvidia-container-tools-1.0.0-0.1.beta.1.x86_64.rpm
@@ -37,7 +37,17 @@ Contents:
 -rw-r--r--  1 root root    4748 Mar  3 01:50 nvidia-docker2-2.0.3-1.docker17.12.1.ce.noarch.rpm
 ```
 
-Assembly procedure:
+#### Assembly procedure:
+
+Step 1:  Start a docker container.
+
+(Mount a volume so there is a place to copy the tarball once you have it.)
+
+```
+docker run -ti --init --rm -v /home/tomk/out:/out centos:7
+```
+
+Step 2:  Fetch the artifacts and tar them up.
 
 ```
 yum install -y yum-utils device-mapper-persistent-data lvm2
